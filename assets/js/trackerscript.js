@@ -70,7 +70,7 @@ const balance = document.getElementById(
     );
     
     item.innerHTML = `
-      ${transaction.text} <span>$;${Math.abs(
+      ${transaction.text} <span>$${Math.abs(
       transaction.amount
     )}</span>
       <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
@@ -99,9 +99,9 @@ const balance = document.getElementById(
         .reduce((acc, item) => (acc += item), 0) *
       -1).toFixed(2);
   
-      balance.innerHTML = `$;${total}`;
-      money_plus.innerHTML = `+$;${income}`;
-      money_minus.innerHTML = `-$;${expense}`;
+      balance.innerHTML = `$${total}`;
+      money_plus.innerHTML = `+$${income}`;
+      money_minus.innerHTML = `-$${expense}`;
   }
   
   
